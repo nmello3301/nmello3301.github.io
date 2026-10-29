@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ===== Search engine basics ===== -->
+  <title>Nicolas Mello | AI &amp; Robotics Researcher, USP</title>
+  <meta name="description" content="Nicolas Mello is an AI and robotics researcher and MS student in Computer Science (AI) at IME-USP, working on Vision-Language-Action model distillation, reinforcement learning, and robot hardware. Formerly IBM Research Brazil.">
+  <meta name="author" content="Nicolas Mello">
+  <link rel="canonical" href="https://nmello3301.github.io/">
+  <!-- Paste your Google Search Console verification tag here (see SETUP.md, step 3):
+  <meta name="google-site-verification" content="PASTE_CODE_HERE">
+  -->
+
+  <!-- ===== Link previews (LinkedIn, X, WhatsApp, Slack) ===== -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Nicolas Mello | AI & Robotics Researcher">
+  <meta property="og:description" content="VLA distillation, reinforcement learning, and robots built from scratch. MS CS-AI at IME-USP, formerly IBM Research.">
+  <meta property="og:url" content="https://nmello3301.github.io/">
+  <meta property="og:image" content="https://nmello3301.github.io/Awesome_Portfolio/media/img/portrait.jpg">
+  <meta property="profile:first_name" content="Nicolas">
+  <meta property="profile:last_name" content="Mello">
+  <meta name="twitter:card" content="summary">
+
+  <!-- ===== Structured data: tells Google this page is about a person ===== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nicolas Mello",
+    "url": "https://nmello3301.github.io/",
+    "image": "https://nmello3301.github.io/Awesome_Portfolio/media/img/portrait.jpg",
+    "email": "mailto:n.mello3301@gmail.com",
+    "jobTitle": "AI and Robotics Researcher",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Universidade de São Paulo (IME-USP)"
+    },
+    "alumniOf": [
+      { "@type": "CollegeOrUniversity", "name": "University of California San Diego" },
+      { "@type": "CollegeOrUniversity", "name": "Universidade de São Paulo" }
+    ],
+    "knowsAbout": ["Vision-Language-Action models", "Policy distillation", "Reinforcement learning", "Robotics", "Sim-to-real", "Robot hardware"],
+    "sameAs": [
+      "https://github.com/nmello3301",
+      "https://www.linkedin.com/in/nicolas-mello3301/",
+      "https://nmello3301.github.io/nmello3301.github.io-portfolio/",
+      "https://nmello3301.github.io/Awesome_Portfolio/",
+      "https://scholar.google.com/citations?user=PnOPeT0AAAAJ"
+    ]
+  }
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2318212b'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' fill='%23fafaf7' text-anchor='middle'%3ENM%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <style>
+    :root {
+      --paper: #fafaf7;
+      --ink: #18212b;
+      --ink-2: #4f5965;
+      --rule: #e1e3df;
+      --link: #1c58a3;
+      --mark: #e3a81b;      /* actuator-yellow, used sparingly */
+      --chip: #eef0ec;
+      --serif: "Newsreader", Georgia, serif;
+      --sans: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        --paper: #14191f; --ink: #e8eae6; --ink-2: #a3abb4; --rule: #2a323b;
+        --link: #7fb0f0; --mark: #f0bd45; --chip: #1e252d;
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+    body {
+      margin: 0; background: var(--paper); color: var(--ink);
+      font-family: var(--sans); font-size: 16.5px; line-height: 1.62;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible, summary:focus-visible { outline: 2px solid var(--mark); outline-offset: 3px; border-radius: 3px; }
+    img { max-width: 100%; display: block; }
+
+    /* ---------- header ---------- */
+    header.top {
+      position: sticky; top: 0; z-index: 10;
+      background: color-mix(in srgb, var(--paper) 92%, transparent);
+      backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule);
+    }
+    .bar { max-width: 1080px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand { font-family: var(--serif); font-size: 1.45rem; font-weight: 600; color: var(--ink); letter-spacing: -0.01em; }
+    .brand:hover { text-decoration: none; }
+    nav.links { display: flex; gap: 26px; font-size: 0.95rem; }
+    nav.links a { color: var(--ink-2); }
+    nav.links a:hover { color: var(--ink); text-decoration: none; }
+
+    /* ---------- layout ---------- */
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 56px 24px 80px; display: grid; grid-template-columns: 260px 1fr; gap: 64px; }
+    aside.side { position: sticky; top: 104px; align-self: start; }
+    main { min-width: 0; max-width: 700px; }
+
+    /* ---------- sidebar ---------- */
+    .portrait { width: 220px; height: auto; aspect-ratio: 1; object-fit: cover; object-position: center 25%; border-radius: 50%; background: var(--chip); }
+    .who { margin: 22px 0 26px; }
+    .who h1 { font-family: var(--serif); font-weight: 600; font-size: 1.7rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.01em; }
+    .who p { margin: 0; color: var(--ink-2); font-size: 0.95rem; line-height: 1.45; }
+    ul.contact { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+    ul.contact li { border-bottom: 1px solid var(--rule); }
+    ul.contact a { display: grid; grid-template-columns: 22px 1fr; align-items: center; gap: 12px; padding: 9px 2px; font-size: 0.95rem; }
+    ul.contact i { color: var(--ink-2); text-align: center; font-size: 1rem; }
+
+    /* ---------- main sections ---------- */
+    .intro p { margin: 0 0 1em; }
+    .intro p:first-child { font-size: 1.08rem; }
+    .interests { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+    .interests li { background: var(--chip); border-radius: 999px; padding: 3px 12px; font-size: 0.86rem; color: var(--ink-2); }
+
+    section { margin-top: 60px; }
+    h2 {
+      font-family: var(--serif); font-weight: 600; font-size: 1.6rem; letter-spacing: -0.01em;
+      margin: 0 0 22px; display: flex; align-items: center; gap: 16px;
+    }
+    h2::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+    /* news */
+    ul.news { list-style: none; margin: 0; padding: 0; }
+    ul.news li { display: grid; grid-template-columns: 88px 1fr; gap: 16px; padding: 7px 0; }
+    ul.news time { color: var(--ink-2); font-size: 0.9rem; font-variant-numeric: tabular-nums; padding-top: 1px; }
+    ul.news li.next time { color: var(--ink); font-weight: 600; }
+    ul.news li.next time::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--mark); margin-right: 7px; vertical-align: 1px; }
+
+    /* publications */
+    .pub { display: grid; grid-template-columns: 168px 1fr; gap: 22px; padding: 18px 0; border-top: 1px solid var(--rule); }
+    .pub:last-of-type { border-bottom: 1px solid var(--rule); }
+    .pub img { width: 168px; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--chip); }
+    .pub h3 { font-size: 1.02rem; font-weight: 600; line-height: 1.4; margin: 0 0 4px; }
+    .pub h3 a { color: var(--ink); }
+    .authors { margin: 0; font-size: 0.93rem; color: var(--ink-2); }
+    .authors b { color: var(--ink); font-weight: 600; }
+    .venue { margin: 2px 0 8px; font-size: 0.93rem; font-style: italic; color: var(--ink-2); }
+    .venue .badge { font-style: normal; font-size: 0.78rem; font-weight: 600; color: var(--ink); background: color-mix(in srgb, var(--mark) 28%, transparent); padding: 1px 8px; border-radius: 4px; margin-left: 6px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 0.9rem; align-items: center; }
+    details summary { cursor: pointer; color: var(--link); list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] summary { margin-bottom: 8px; }
+    details pre { margin: 0; padding: 12px 14px; background: var(--chip); border-radius: 6px; font-size: 0.78rem; line-height: 1.5; overflow-x: auto; white-space: pre; }
+    .actions details { flex-basis: 100%; }
+    .actions details:not([open]) { flex-basis: auto; }
+
+    /* portfolios */
+    .portfolios { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .folio { display: block; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; color: var(--ink); }
+    .folio:hover { text-decoration: none; border-color: var(--ink-2); }
+    .folio img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; background: var(--chip); }
+    .folio div { padding: 14px 16px 16px; }
+    .folio strong { display: block; font-weight: 600; margin-bottom: 2px; }
+    .folio span { font-size: 0.9rem; color: var(--ink-2); }
+
+
+    /* background */
+    dl.cv { display: grid; grid-template-columns: 112px 1fr; gap: 10px 16px; margin: 0; }
+    dl.cv dt { color: var(--ink-2); font-size: 0.9rem; font-variant-numeric: tabular-nums; padding-top: 2px; }
+    dl.cv dd { margin: 0; }
+    dl.cv dd small { display: block; color: var(--ink-2); font-size: 0.9rem; }
+
+    footer { border-top: 1px solid var(--rule); color: var(--ink-2); font-size: 0.86rem; }
+    footer .bar { height: auto; padding-top: 22px; padding-bottom: 28px; }
+
+    /* ---------- responsive ---------- */
+    @media (max-width: 860px) {
+      .wrap { grid-template-columns: 1fr; gap: 36px; padding-top: 36px; }
+      aside.side { position: static; display: grid; grid-template-columns: 132px 1fr; gap: 6px 22px; align-items: center; }
+      .portrait { width: 132px; }
+      .who { margin: 0; }
+      ul.contact { grid-column: 1 / -1; margin-top: 18px; display: flex; flex-wrap: wrap; border: 0; gap: 8px; }
+      ul.contact li { border: 0; }
+      ul.contact a { display: inline-flex; gap: 8px; padding: 5px 12px; border: 1px solid var(--rule); border-radius: 999px; font-size: 0.88rem; }
+      main { max-width: none; }
+    }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      .bar { padding: 0 16px; }
+      .wrap { padding-left: 16px; padding-right: 16px; }
+      nav.links { gap: 16px; font-size: 0.88rem; }
+      nav.links .hide-sm { display: none; }
+      aside.side { grid-template-columns: 96px 1fr; }
+      .portrait { width: 96px; }
+      .who h1 { font-size: 1.4rem; }
+      .pub { grid-template-columns: 1fr; gap: 12px; }
+      .pub img { width: 100%; aspect-ratio: 16 / 9; }
+      .portfolios { grid-template-columns: 1fr; }
+      ul.news li { grid-template-columns: 1fr; gap: 0; }
+      dl.cv { grid-template-columns: 1fr; gap: 2px; }
+      dl.cv dd { margin-bottom: 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <a class="brand" href="#">Nicolas Mello</a>
+    <nav class="links" aria-label="Sections">
+      <a href="#news">News</a>
+      <a href="#publications">Publications</a>
+      <a href="#portfolios">Portfolios</a>
+      <a class="hide-sm" href="https://nmello3301.github.io/nmello3301.github.io-portfolio/site-assets/cv/Nicolas-Mello-CV.pdf">CV</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <aside class="side">
+    <img class="portrait" src="https://nmello3301.github.io/Awesome_Portfolio/media/img/portrait.jpg" alt="Portrait of Nicolas Mello" width="220" height="220">
+    <div class="who">
+      <h1>Nicolas Mello</h1>
+      <p>AI &amp; Robotics Researcher<br>MS student, IME&ndash;USP</p>
+    </div>
+    <ul class="contact">
+      <li><a href="mailto:n.mello3301@gmail.com"><i class="fa-solid fa-envelope" aria-hidden="true"></i>n.mello3301@gmail.com</a></li>
+      <li><a href="https://scholar.google.com/citations?user=PnOPeT0AAAAJ"><i class="ai ai-google-scholar" aria-hidden="true"></i>Google Scholar</a></li>
+      <li><a href="https://github.com/nmello3301"><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/nicolas-mello3301/"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>LinkedIn</a></li>
+      <li><a href="https://nmello3301.github.io/nmello3301.github.io-portfolio/site-assets/cv/Nicolas-Mello-CV.pdf"><i class="fa-regular fa-file-lines" aria-hidden="true"></i>CV (PDF)</a></li>
+      <li><a href="https://nmello3301.github.io/nmello3301.github.io-portfolio/"><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i>Normal Portfolio</a></li>
+      <li><a href="https://nmello3301.github.io/Awesome_Portfolio/"><i class="fa-solid fa-cube" aria-hidden="true"></i>Awesome Portfolio</a></li>
+    </ul>
+  </aside>
+
+  <main>
+
+    <div class="intro">
+      <p>I'm an MS student in Computer Science (Artificial Intelligence) at the Institute of Mathematics and Statistics of the University of São Paulo (IME&ndash;USP), advised by Prof. Leliane Nunes de Barros. My research distills large Vision-Language-Action (VLA) models into compact reinforcement-learning policies that are fast and reliable enough to deploy on real robots.</p>
+      <p>Before my MS, I spent two years at <a href="https://research.ibm.com/labs/brazil">IBM Research Brazil</a>, where I was a lead code contributor on the Granite Trust safety team, working on RAG systems and LoRA adapters for Granite&nbsp;4 and on GPU workloads at scale. I received my B.S. in Electrical Engineering, with a depth in machine learning, from <a href="https://jacobsschool.ucsd.edu/">UC San Diego</a>.</p>
+      <p>I like working at every layer of the stack. At home, I built a 6-DoF robotic arm from scratch, from the CAD and actuators to the firmware, and I'm now working on the learned policy that will drive it.</p>
+      <ul class="interests" aria-label="Research interests">
+        <li>Vision-Language-Action models</li>
+        <li>Policy distillation</li>
+        <li>Reinforcement learning</li>
+        <li>Neuro-symbolic AI</li>
+        <li>Sim-to-real</li>
+        <li>Robot hardware</li>
+      </ul>
+    </div>
+
+    <section id="news" aria-labelledby="news-h">
+      <h2 id="news-h">News</h2>
+      <ul class="news">
+        <li class="next"><time datetime="2026-12">Dec 2026</time><span>Expected to graduate with my MS in Computer Science (AI) from IME&ndash;USP.</span></li>
+        <li><time datetime="2026-11">Nov 2026</time><span>Completed my independent project: a 6-DoF robotic arm built from scratch. Sim-to-real transfer is planned next.</span></li>
+        <li><time datetime="2026">2026</time><span>Our paper <a href="https://nmello3301.github.io/VLA-Distillation/"><em>Adaptive and Uncertainty-Gated Policy Distillation</em></a> was accepted at <strong>ENIAC 2026</strong>.</span></li>
+        <li><time datetime="2026">2026</time><span>IBM Research open-sourced <a href="https://github.com/ibm-granite/granite.trust.policy-tools">Granite.trust Policy Tools</a>, a framework for shareable, actionable policies for generative AI. I'm second author on the report.</span></li>
+        <li><time datetime="2025">2025</time><span>Started an independent project: a 6-DoF robotic arm with custom cycloidal and planetary actuators, aimed at long-horizon laundry folding.</span></li>
+        <li><time datetime="2024">2024</time><span>Began my MS in Computer Science (AI) at IME&ndash;USP and joined IBM Research Brazil.</span></li>
+      </ul>
+    </section>
+
+    <section id="publications" aria-labelledby="pubs-h">
+      <h2 id="pubs-h">Publications</h2>
+
+      <article class="pub">
+        <a href="https://nmello3301.github.io/VLA-Distillation/" tabindex="-1" aria-hidden="true"><img src="https://nmello3301.github.io/nmello3301.github.io-portfolio/site-assets/img/thumbs/vla.jpeg" alt="" loading="lazy"></a>
+        <div>
+          <h3><a href="https://nmello3301.github.io/VLA-Distillation/">Vision-Language-Action Models: Adaptive and Uncertainty-Gated Policy Distillation</a></h3>
+          <p class="authors"><b>Nicolas Mello</b>, Leliane Nunes de Barros</p>
+          <p class="venue">Encontro Nacional de Inteligência Artificial e Computacional (ENIAC), 2026</p>
+          <div class="actions">
+            <a href="https://github.com/nmello3301/rpd-isaaclab/blob/main/ENIAC_2026_camera-ready.pdf">Paper</a>
+            <a href="https://nmello3301.github.io/VLA-Distillation/">Project page</a>
+            <a href="https://github.com/nmello3301/rpd-isaaclab">Code</a>
+            <details>
+              <summary>BibTeX</summary>
+<pre>@inproceedings{mello2026vla,
+  title     = {Vision-Language-Action Models: Adaptive and
+               Uncertainty-Gated Policy Distillation},
+  author    = {Mello, Nicolas and {Nunes de Barros}, Leliane},
+  booktitle = {Proc. of the Brazilian Conference on
+               Intelligent Systems (ENIAC)},
+  year      = {2026},
+  address   = {Sao Paulo, Brazil}
+}</pre>
+            </details>
+          </div>
+        </div>
+      </article>
+
+      <article class="pub">
+        <a href="https://github.com/ibm-granite/granite.trust.policy-tools" tabindex="-1" aria-hidden="true"><img src="https://nmello3301.github.io/nmello3301.github.io-portfolio/site-assets/img/thumbs/ibm.jpg" alt="" loading="lazy"></a>
+        <div>
+          <h3><a href="https://github.com/ibm-granite/granite.trust.policy-tools/blob/main/docs/Granite-Trust-Policy-Tools.pdf">Granite.Trust Policy Tools: Shareable, Actionable Policies for Generative AI Applications</a></h3>
+          <p class="authors">Nathalie Baracaldo, <b>Nicolas Mello</b>, Kush R. Varshney, Heiko Ludwig, Kate Soule, David Cox</p>
+          <p class="venue">IBM Research technical report, 2026</p>
+          <div class="actions">
+            <a href="https://github.com/ibm-granite/granite.trust.policy-tools/blob/main/docs/Granite-Trust-Policy-Tools.pdf">Report</a>
+            <a href="https://github.com/ibm-granite/granite.trust.policy-tools">Code</a>
+            <details>
+              <summary>BibTeX</summary>
+<pre>@misc{genai-policy-tools,
+  title     = {Granite.Trust Policy Tools: Shareable, Actionable
+               Policies for Generative AI Applications},
+  publisher = {IBM Research},
+  author    = {Nathalie Baracaldo and Nicolas Mello and
+               Kush R. Varshney and Heiko Ludwig and
+               Kate Soule and David Cox},
+  year      = {2026},
+  url       = {https://github.com/ibm-granite/granite.trust.policy-tools}
+}</pre>
+            </details>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section id="portfolios" aria-labelledby="folio-h">
+      <h2 id="folio-h">Portfolios</h2>
+      <div class="portfolios">
+        <a class="folio" href="https://nmello3301.github.io/nmello3301.github.io-portfolio/">
+          <img src="https://nmello3301.github.io/nmello3301.github.io-portfolio/site-assets/img/arm/assembled.jpeg" alt="The 6-DoF robotic arm Nicolas built at home" loading="lazy">
+          <div><strong>Normal Portfolio</strong><span>Every software and hardware project, with write-ups and photos.</span></div>
+        </a>
+        <a class="folio" href="https://nmello3301.github.io/Awesome_Portfolio/">
+          <img src="https://nmello3301.github.io/Awesome_Portfolio/media/img/arm_sim.jpg" alt="Simulated twin of the robotic arm" loading="lazy">
+          <div><strong>Awesome Portfolio</strong><span>A scroll-driven 3D walk through my workshop. Best on a computer.</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section id="background" aria-labelledby="bg-h">
+      <h2 id="bg-h">Background</h2>
+      <dl class="cv">
+        <dt>2024&ndash;2026</dt>
+        <dd>M.S. in Computer Science (Artificial Intelligence)<small>Universidade de São Paulo, IME&ndash;USP</small></dd>
+        <dt>2024&ndash;2025</dt>
+        <dd>Research contributor, Granite Trust team<small>IBM Research, Brazil Lab</small></dd>
+        <dt>2023</dt>
+        <dd>International Trainee, Danfoss Drives Brazil<small>One of 12 trainees selected worldwide, one per country, including a 3-week program in Denmark</small></dd>
+        <dt>2023</dt>
+        <dd>B.S. in Electrical Engineering, Machine Learning depth<small>UC San Diego, Jacobs School of Engineering</small></dd>
+      </dl>
+    </section>
+
+  </main>
+</div>
+
+<footer>
+  <div class="bar">
+    <span>&copy; 2026 Nicolas Mello</span>
+    <a href="mailto:n.mello3301@gmail.com">n.mello3301@gmail.com</a>
+  </div>
+</footer>
+
+</body>
+</html>
