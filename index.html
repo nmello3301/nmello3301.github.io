@@ -157,6 +157,12 @@
     .actions details { flex-basis: 100%; }
     .actions details:not([open]) { flex-basis: auto; }
 
+    /* robot arm */
+    .arm { display: grid; grid-template-columns: 220px 1fr; gap: 26px; align-items: start; }
+    .arm video { width: 220px; aspect-ratio: 480 / 860; object-fit: cover; border-radius: 10px; background: var(--chip); display: block; }
+    .arm p { margin: 0 0 0.9em; }
+    .arm .actions { margin-top: 4px; }
+
     /* portfolios */
     .portfolios { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .folio { display: block; border: 1px solid var(--rule); border-radius: 10px; overflow: hidden; color: var(--ink); }
@@ -199,6 +205,8 @@
       .pub { grid-template-columns: 1fr; gap: 12px; }
       .pub img { width: 100%; aspect-ratio: 16 / 9; }
       .portfolios { grid-template-columns: 1fr; }
+      .arm { grid-template-columns: 1fr; }
+      .arm video { width: min(100%, 260px); }
       ul.news li { grid-template-columns: 1fr; gap: 0; }
       dl.cv { grid-template-columns: 1fr; gap: 2px; }
       dl.cv dd { margin-bottom: 12px; }
@@ -211,6 +219,7 @@
   <div class="bar">
     <a class="brand" href="#">Nicolas Mello</a>
     <nav class="links" aria-label="Sections">
+      <a href="#arm">Robot arm</a>
       <a href="#news">News</a>
       <a href="#publications">Publications</a>
       <a href="#portfolios">Portfolios</a>
@@ -243,7 +252,7 @@
     <div class="intro">
       <p>I'm an MS student in Computer Science (Artificial Intelligence) at the Institute of Mathematics and Statistics of the University of São Paulo (IME&ndash;USP), advised by Prof. Leliane Nunes de Barros. My research distills large Vision-Language-Action (VLA) models into compact reinforcement-learning policies that are fast and reliable enough to deploy on real robots.</p>
       <p>Before my MS, I spent two years at <a href="https://research.ibm.com/labs/brazil">IBM Research Brazil</a>, where I was a lead code contributor on the Granite Trust safety team, working on RAG systems and LoRA adapters for Granite&nbsp;4 and on GPU workloads at scale. I received my B.S. in Electrical Engineering, with a depth in machine learning, from <a href="https://jacobsschool.ucsd.edu/">UC San Diego</a>.</p>
-      <p>I like working at every layer of the stack. At home, I built a 6-DoF robotic arm from scratch, from the CAD and actuators to the firmware, and I'm now working on the learned policy that will drive it.</p>
+      <p>I like working at every layer of the stack. At home, I built a working 6-DoF robotic arm from scratch, from the CAD and actuators to the firmware, and I'm now working on the learned policy that will drive it.</p>
       <ul class="interests" aria-label="Research interests">
         <li>Vision-Language-Action models</li>
         <li>Policy distillation</li>
@@ -254,12 +263,27 @@
       </ul>
     </div>
 
+    <section id="arm" aria-labelledby="arm-h">
+      <h2 id="arm-h">Robotic arm</h2>
+      <div class="arm">
+        <video src="media/arm-6dof.mp4" poster="media/arm-6dof-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-label="The 6-DoF robotic arm moving through its joints"></video>
+        <div>
+          <p>A 6-DoF arm I designed and built at home, unaffiliated and self-directed. Custom cycloidal and planetary actuators, a differential wrist, magnetic encoders, and closed-loop servos on a CAN bus driven by ESP32 controllers, almost all of it 3D printed.</p>
+          <p>The build was completed in November 2026, and every joint moves under closed-loop control. The next revision targets lower backlash and more torque, followed by sim-to-real transfer of policies trained in NVIDIA Isaac Lab. The long-term target task is folding laundry.</p>
+          <div class="actions">
+            <a href="https://nmello3301.github.io/nmello3301.github.io-portfolio/#hardware">Build log and actuators</a>
+            <a href="https://nmello3301.github.io/Awesome_Portfolio/">3D workshop tour</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="news" aria-labelledby="news-h">
       <h2 id="news-h">News</h2>
       <ul class="news">
-        <li class="next"><time datetime="2026-12">Dec 2026</time><span>Expected to graduate with my MS in Computer Science (AI) from IME&ndash;USP.</span></li>
-        <li><time datetime="2026-11">Nov 2026</time><span>Completed my independent project: a 6-DoF robotic arm built from scratch. Sim-to-real transfer is planned next.</span></li>
-        <li><time datetime="2026">2026</time><span>Our paper <a href="https://nmello3301.github.io/VLA-Distillation/"><em>Adaptive and Uncertainty-Gated Policy Distillation</em></a> was accepted at <strong>ENIAC 2026</strong>.</span></li>
+        <li class="next"><time datetime="2027-01">Jan 2027</time><span>Expected to graduate with my MS in Computer Science (AI) from IME&ndash;USP.</span></li>
+        <li><time datetime="2026-11">Nov 2026</time><span>Completed my independent project: a working 6-DoF robotic arm built from scratch (<a href="#arm">video</a>). Next: a revision for lower backlash and more torque, then sim-to-real policy transfer.</span></li>
+        <li><time datetime="2026">2026</time><span>Our paper <a href="https://nmello3301.github.io/VLA-Distillation/"><em>Adaptive and Uncertainty-Gated Policy Distillation</em></a> was published and presented at <strong>ENIAC 2026</strong>.</span></li>
         <li><time datetime="2026">2026</time><span>IBM Research open-sourced <a href="https://github.com/ibm-granite/granite.trust.policy-tools">Granite.trust Policy Tools</a>, a framework for shareable, actionable policies for generative AI. I'm second author on the report.</span></li>
         <li><time datetime="2025">2025</time><span>Started an independent project: a 6-DoF robotic arm with custom cycloidal and planetary actuators, aimed at long-horizon laundry folding.</span></li>
         <li><time datetime="2024">2024</time><span>Began my MS in Computer Science (AI) at IME&ndash;USP and joined IBM Research Brazil.</span></li>
@@ -339,7 +363,7 @@
     <section id="background" aria-labelledby="bg-h">
       <h2 id="bg-h">Background</h2>
       <dl class="cv">
-        <dt>2024&ndash;2026</dt>
+        <dt>2024&ndash;2027</dt>
         <dd>M.S. in Computer Science (Artificial Intelligence)<small>Universidade de São Paulo, IME&ndash;USP</small></dd>
         <dt>2024&ndash;2025</dt>
         <dd>Research contributor, Granite Trust team<small>IBM Research, Brazil Lab</small></dd>
